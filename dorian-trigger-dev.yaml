@@ -22,7 +22,7 @@ steps:
 - name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
-  - run
+  - --run
   - --filename=dorian-pod.yaml
   - --image=gcr.io/badboydevop/teamwebsite:latest
   - --location=us-central1-c
