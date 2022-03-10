@@ -19,11 +19,11 @@ steps:
   - 'gcr.io/badboydevop/teamwebsite:latest'
 
         # This step deploys the application in Kubernetes
-- name: 'gcr.io/cloud-builder/gke-deploy'
+- name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
   - run
-  - --filename=dorian-pod.yaml
-  - --image=gcr.io/badboydevop/teamwebsite:latest
-  - --location=us-central1-c
-  - --cluster=cluster-1
+  - filename=dorian-pod.yaml
+  - image=gcr.io/badboydevop/teamwebsite:latest
+  - location=us-central1-c
+  - cluster=cluster-1
