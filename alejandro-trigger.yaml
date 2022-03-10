@@ -9,21 +9,21 @@ steps:
   - 'build'
   - '.'
   - '-t'
-  - 'grc.io/badBoyDevop/teamwebsite:latest'
+  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 #This step pushes the image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   id: Push
   args:
   - 'push'
-  - 'grc.io/badBoyDevop/teamwebsite:latest'
+  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 # This step deploys the application in Kubernetes
-- name: 'grc.io/cloud-builders/gke-deploy'
+- name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
    - run
    - --filename=alejandro-pod.yaml
-   - --image=grc.io/badBoyDevop/teamwebsite:latest
+   - --image=gcr.io/badBoyDevop/teamwebsite:latest
    - --location=us-central1-c
    - --cluster=cluster-1
