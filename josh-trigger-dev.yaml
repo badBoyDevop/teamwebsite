@@ -9,14 +9,14 @@ steps:
   - 'build'
   - '.'
   - '-t'
-  - 'gcr.io/$PROJECT_ID/teamwebsite:latest'
+  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 #This step pushes the image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   id: Push
   args:
   - 'push'
-  - 'gcr.io/$PROJECT_ID/teamwebsite:latest'
+  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 # This step deploys the application in Kubernetes
 - name: 'grc.io/cloud-builders/gke-deploy'
@@ -24,6 +24,6 @@ steps:
   args:
    - run
    - --filename=josh-pod.yaml
-   - --image=grc.io/$PROJECT_ID/spanishbytopic-api:latest
+   - --image=grc.io/badBoyDevop/teamwebsite:latest
    - --location=us-east1-b
    - --cluster=cluster-1
