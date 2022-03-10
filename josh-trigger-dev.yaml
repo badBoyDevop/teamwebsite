@@ -19,11 +19,11 @@ steps:
   - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 # This step deploys the application in Kubernetes
-- name: 'grc.io/cloud-builders/gke-deploy'
+- name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
    - run
    - --filename=josh-pod.yaml
-   - --image=grc.io/badBoyDevop/teamwebsite:latest
+   - --image=gcr.io/badBoyDevop/teamwebsite:latest
    - --location=us-east1-b
    - --cluster=cluster-1
