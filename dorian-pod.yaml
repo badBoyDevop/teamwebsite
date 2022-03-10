@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dorian-lapi
+spec: 
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dorian-lapi
+  template:
+    metadata:
+      labels:
+        app: dorian-lapi
+    spec:
+      containers:
+      - name: dorian-lapi
+        image: nginx
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 100m
+            memory: 250M
+          requests:
+            cpu: 50m
+            memory: 100M
+
+
+
