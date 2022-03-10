@@ -23,7 +23,7 @@ steps:
   id: Deploy Pod to Kubernetes
   args:
   - run
-  - --filename=dorian-pod.yaml
+  - --filename=dev.yaml
   - --image=gcr.io/badboydevop/teamwebsite:latest
   - --location=us-central1-c
   - --cluster=cluster-1
