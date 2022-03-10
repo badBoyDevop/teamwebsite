@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: alejandro-duarte
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+     app: alejandro-duarte
+  template:
+   metadata:
+     labels:
+       app: alejandro-duarte
+   spec:
+     containers:
+       - name: alejandro-duarte
+         image: nginx
+         ports:
+         - containerPort: 80
+         resources:
+          limits:
+            cpu: 100m
+            memory: 250M
+          requests:
+            cpu: 50m
+            memory: 100M
