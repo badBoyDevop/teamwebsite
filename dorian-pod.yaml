@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: dorian-lapi-team
+  name: dorian-lapi
 spec: 
   replicas: 1
   selector:
     matchLabels:
-      app: dorian-lapi-team
+      app: dorian-lapi
   template:
     metadata:
       labels:
-        app: dorian-lapi-team
+        app: dorian-lapi
     spec:
       containers:
-      - name: dorian-lapi-team
+      - name: dorian-lapi
         image: nginx
         ports:
         - containerPort: 80
