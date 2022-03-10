@@ -24,6 +24,6 @@ steps:
   args:
    - run
    - --filename=alejandro-pod.yaml
-   - --image=grc.io/badBoyDevop/teamwebsite:latest
+   - --image=grc.io/badboydevop/teamwebsite:latest
    - --location=us-central1-c
    - --cluster=cluster-1
