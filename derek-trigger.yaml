@@ -23,7 +23,7 @@ steps:
   id: Deploy Pod to Kubernetes
   args:
    - run
-   - --filename=alejandro-pod.yaml
-   - --image=grc.io/$PROJECT_ID/teamwebsite:$SHORT_SHA
-   - --location=us-central1-c
+   - --filename=dev.yaml
+   - --image=grc.io/$PROJECT_ID/spanishbytopic-api:$SHORT_SHA
+   - --location=us-east1-b
    - --cluster=cluster-1
