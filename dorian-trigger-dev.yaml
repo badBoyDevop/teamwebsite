@@ -1,4 +1,4 @@
-#This is the main idea of this yaml file.
+##This is the main idea of this yaml file.
 steps:
 #This sets up the tests
 
@@ -17,3 +17,13 @@ steps:
   args:
   - 'push'
   - 'gcr.io/$PROJECT_ID/teamwebsite:latest'
+
+        # This step deploys the application in Kubernetes
+  - name: 'gcr.io/cloud-builders/gke-deploy'
+    id: Deploy Pod to Kubernetes
+    args:
+      - run
+      - --filename=dorian-pod.yaml
+      - --image=gcr.io/$PROJECT_ID/teamwebsite:latest
+      - --location=us-central1-c
+      - --cluster=cluster-1
