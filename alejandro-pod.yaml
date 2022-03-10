@@ -14,7 +14,7 @@ spec:
    spec:
      containers:
        - name: alejandro-duarte
-         image: image=grc.io/badBoyDevop/teamwebsite:latest
+         image: image=grc.io/badboydevop/teamwebsite:latest
          ports:
          - containerPort: 80
          resources:
