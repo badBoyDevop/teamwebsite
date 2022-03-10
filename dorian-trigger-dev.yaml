@@ -19,7 +19,7 @@ steps:
   - 'gcr.io/badboydevop/teamwebsite:latest'
 
         # This step deploys the application in Kubernetes
-- name: 'gcr.io/cloud-builders/pod-deploy'
+- name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
   - run
