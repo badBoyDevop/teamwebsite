@@ -1,15 +1,6 @@
 #This is the main idea of this yaml file.
 steps:
-#This sets up the tests
 
-#This steps builds the container image.
-- name: 'gcr.io/cloud-builders/docker'
-  id: Build Docker Image
-  args:
-  - 'build'
-  - '.'
-  - '-t'
-  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 #This step pushes the image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
@@ -19,11 +10,11 @@ steps:
   - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 # This step deploys the application in Kubernetes
-- name: 'grc.io/cloud-builders/gke-deploy'
+- name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
    - run
    - --filename=alejandro-pod.yaml
-   - --image=grc.io/badboydevop/teamwebsite:latest
+   - --image=gcr.io/badBoyDevop/teamwebsite:latest
    - --location=us-central1-c
    - --cluster=cluster-1
