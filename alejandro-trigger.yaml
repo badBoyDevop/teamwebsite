@@ -9,14 +9,14 @@ steps:
   - 'build'
   - '.'
   - '-t'
-  - 'grc.io/badboydevop/teamwebsite:latest'
+  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 #This step pushes the image to Container Registry
 - name: 'gcr.io/cloud-builders/docker'
   id: Push
   args:
   - 'push'
-  - 'grc.io/badboydevop/teamwebsite:latest'
+  - 'gcr.io/badBoyDevop/teamwebsite:latest'
 
 # This step deploys the application in Kubernetes
 - name: 'grc.io/cloud-builders/gke-deploy'
