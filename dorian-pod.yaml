@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: dorian-lapi
-        image: gcr.io/badboydevop/teamwebsite:latest
+        image: gcr.io/badboydevop/teamwebsite
         ports:
         - containerPort: 80
         resources:
