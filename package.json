@@ -12,7 +12,6 @@
     "test": "mocha",
     "start": "node server.js"
   },
-  "type": "module",
   "name": "cit262devops",
   "description": "Testing pull request.",
   "version": "1.0.0",
