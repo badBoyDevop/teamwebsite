@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: derek-washburn
-        image: image=gcr.io/badBoyDevop/teamwebsite:latest
+        image: image=gcr.io/badboydevop/teamwebsite:latest
         ports:
         - containerPort: 80
         resources:
