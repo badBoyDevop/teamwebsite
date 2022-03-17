@@ -14,9 +14,9 @@ spec:
     spec:
       containers:
       - name: derek-washburn
-        image: image=gcr.io/badboydevop/teamwebsite
+        image: image=gcr.io/badboydevop/teamwebsite/derek-pod.yaml
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         resources:
           limits:
             cpu: 100m
