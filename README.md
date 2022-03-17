@@ -12,3 +12,9 @@
 # git checkout main
 # git pull
 # git branch -d branchname
+
+# creating a package.json files
+
+# npm init
+# npm install
+# Need to create a test website to connect for the image create a server.js file (template found in Slack)
