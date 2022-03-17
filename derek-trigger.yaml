@@ -23,7 +23,7 @@ steps:
   id: Deploy Pod to Kubernetes
   args:
    - run
-   - --filename=dev.yaml
+   - --filename=derek-pod.yaml
    - --image=gcr.io/badboydevop/teamwebsite:latest
-   - --location=us-east1-b
+   - --location=us-central1-c
    - --cluster=cluster-1

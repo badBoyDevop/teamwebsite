@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: joshua-petersen
-        image: nginx
+        image: gcr.io/badboydevop/teamwebsite
         ports: 
         - containerPort: 80
         resources:

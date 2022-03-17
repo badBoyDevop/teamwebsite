@@ -9,9 +9,9 @@
   },
   "scripts": {
     "test-dev": "cross-env NODE_ENV=development mocha",
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node server.js"
   },
-  "type": "module",
   "name": "cit262devops",
   "description": "Testing pull request.",
   "version": "1.0.0",
