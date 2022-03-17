@@ -16,7 +16,7 @@ spec:
        - name: alejandro-duarte
          image: grc.io/badboydevop/teamwebsite
          ports:
-         - containerPort: 80
+         - containerPort: 3000
          resources:
           limits:
             cpu: 100m
