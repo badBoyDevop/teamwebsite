@@ -24,16 +24,15 @@ spec:
           requests:
             cpu: 50m
             memory: 100M
-      ---
-      apiVersion: v1
-      kind: Service
-      metadata:
-        name: derekWashburn-service
-      spec:
-        selector:
-          app: derek-washburn
-        type: LoadBalancer
-        ports:
-        - port: 80
-        targetPort: 3000
-      ---
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: derekWashburn-service
+spec:
+  selector:
+    app: derek-washburn
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 3000
