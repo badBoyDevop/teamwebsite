@@ -32,7 +32,7 @@ metadata:
 spec:
   selector:
     app: dorian-lapi
-  type: Service
+  type: LoadBalancer
   ports: 
     port: 80
     targetPort: 3000
