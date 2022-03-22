@@ -5,14 +5,14 @@ metadata:
 spec:
   replicas: 1
   selector:
-    matchLabels:
-      app: joshua-petersen
+   matchLabels:
+     app: joshua-petersen
   template:
-    metadata:
-      labels:
-        app: joshua-petersen
-    spec:
-      containers:
+   metadata:
+     labels:
+       app: joshua-petersen
+   spec:
+     containers:
       - name: joshua-petersen
         image: gcr.io/badboydevop/teamwebsite
         ports: 
@@ -20,10 +20,10 @@ spec:
         resources:
           limits:
             cpu: 100m
-            memory: 250m
+            memory: 250M
           requests:
             cpu: 50m
-            memory: 100m
+            memory: 100M
 ---
 apiVersion: v1
 kind: Service
