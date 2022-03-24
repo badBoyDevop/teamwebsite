@@ -26,6 +26,7 @@
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/whitewater123/CIT262DevOps/issues"
   },
