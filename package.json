@@ -4,7 +4,7 @@
     "cross-env": "^7.0.3",
     "express": "^4.17.3",
     "jest": "^27.4.7",
-    "mocha": "^9.2.0",
+    "mocha": "^9.2.2",
     "node-fetch": "^3.2.0"
   },
   "scripts": {
@@ -12,6 +12,7 @@
     "test": "mocha",
     "start": "node server.js"
   },
+  "type": "module",
   "name": "cit262devops",
   "description": "Testing pull request.",
   "version": "1.0.0",
