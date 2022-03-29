@@ -18,7 +18,7 @@ steps:
   - 'push'
   - 'gcr.io/badboydevop/teamwebsite:latest'
 
-        # This step deploys the application in Kubernetes
+# This step deploys the application in Kubernetes
 - name: 'gcr.io/cloud-builders/gke-deploy'
   id: Deploy Pod to Kubernetes
   args:
@@ -27,3 +27,18 @@ steps:
   - --image=gcr.io/badboydevop/teamwebsite:latest
   - --location=us-central1-c
   - --cluster=cluster-1
+
+#Run test
+# This step runs the ConstellationTests Image 
+# The PROJECT_ID variable is automatically
+# replaced by Cloud Build.
+- name: 'gcr.io/cloud-builders/docker'
+  id: run
+  env:
+  - 'NODE_ENV=development'
+  args:
+  - 'run'
+  - 'gcr.io/badboydevop/teamwebsite:latest'
+  - 'npm'
+  - 'run'
+  - 'test'
