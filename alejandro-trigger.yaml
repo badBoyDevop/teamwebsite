@@ -33,7 +33,7 @@ steps:
 # The PROJECT_ID variable is automatically
 # replaced by Cloud Build.
 - name: 'gcr.io/cloud-builders/docker'
-  id: run
+  id: test
   env:
   - 'NODE_ENV=development'
   args:
