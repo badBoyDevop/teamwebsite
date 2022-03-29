@@ -1,16 +1,13 @@
-import fetch from "node-fetch";
+import assert from 'assert';
+import loaddorian from '../utils/loaderdorian.mjs';
 
-const loaddorian = async () => {
+it("Test Dorian URL Endpoint", async()=>{ 
 
-    const options = {
-        method: 'GET',
-        headers: {'Content-Type':'application/json'}
-    };
+    const urlResponse = await loaddorian();
+    console.log("URL Response: ")+urlResponse;
+ 
+    assert.equal(urlResponse, "Hello Dorian!");
+ } 
+ );
 
-    const apiResponse = await fetch('http://34.71.252.196/dorian',options);
-    const testResponse = await apiResponse.text();
 
-    return testResponse;
-}
-
-export default loaddorian;
